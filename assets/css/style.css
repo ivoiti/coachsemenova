@@ -107,6 +107,15 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 }
 .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
 .hero h1 { font-size: clamp(36px, 5vw, 62px); margin: 8px 0 22px; }
+
+/* Centered text-only hero (no portrait) */
+.hero--center { padding: 190px 0 100px; text-align: center; }
+.hero--center .wrap { grid-template-columns: 1fr; max-width: 940px; }
+.hero--center h1 { font-size: clamp(38px, 5.6vw, 70px); margin-left: auto; margin-right: auto; }
+.hero--center .role { display: inline-block; }
+.hero--center .lead { margin-left: auto; margin-right: auto; }
+.hero--center .hero-cta { justify-content: center; }
+.hero--center::before { top: -14%; right: 50%; transform: translateX(50%); width: 760px; height: 760px; }
 .hero h1 .accent { color: var(--petrol); font-style: italic; }
 .hero .role { font-size: 15px; letter-spacing: .04em; color: var(--muted); font-weight: 500; }
 .hero .lead { font-size: 18.5px; color: #435a58; max-width: 30em; margin: 0 0 34px; }
