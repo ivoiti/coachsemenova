@@ -115,7 +115,8 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 .hero--center .role { display: inline-block; }
 .hero--center .lead { margin-left: auto; margin-right: auto; }
 .hero--center .hero-cta { justify-content: center; }
-.hero--center::before { top: -14%; right: 50%; transform: translateX(50%); width: 760px; height: 760px; }
+.hero--center::before { top: 0; left: 0; right: 0; width: 100%; height: 780px; transform: none;
+  background: radial-gradient(88% 90% at 50% -6%, var(--blush-soft), rgba(246,228,224,0) 72%); }
 .hero h1 .accent { color: var(--petrol); font-style: italic; }
 .hero .role { font-size: 15px; letter-spacing: .04em; color: var(--muted); font-weight: 500; }
 .hero .lead { font-size: 18.5px; color: #435a58; max-width: 30em; margin: 0 0 34px; }
@@ -234,6 +235,21 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 .tg p { color: rgba(255,255,255,.82); margin: 12px 0 0; max-width: 40ch; }
 .tg .tg-ico { font-size: 15px; letter-spacing:.14em; text-transform: uppercase; color: var(--blush); font-weight: 600; }
 
+/* ---------- Space on Tverskaya (art-coaching) ---------- */
+.space { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.space__text p { color: #46605d; margin: 0 0 16px; }
+.space__text .btn { margin-top: 14px; }
+.space__card { position: relative; aspect-ratio: 5/4; border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden;
+  background: radial-gradient(130% 130% at 18% 8%, var(--blush-soft), var(--petrol-soft) 92%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+.space__badge { position: absolute; top: 20px; left: 20px; background: #fff; color: var(--petrol); font-size: 12px; font-weight: 600; padding: 7px 15px; border-radius: 100px; box-shadow: var(--shadow-soft); }
+.space__motif { display: flex; gap: 20px; align-items: center; }
+.space__motif span { display: block; }
+.space__motif span:nth-child(1) { width: 58px; height: 58px; border-radius: 50%; background: var(--coral); }
+.space__motif span:nth-child(2) { width: 74px; height: 14px; border-radius: 100px; background: var(--petrol); }
+.space__motif span:nth-child(3) { width: 48px; height: 48px; border-radius: 12px; background: var(--blush); transform: rotate(45deg); }
+.space__caption { font-family: var(--serif); font-style: italic; font-size: 23px; color: var(--petrol-deep); }
+
 /* ---------- Final CTA / contacts ---------- */
 .contact { text-align: center; }
 .contact h2 { font-size: clamp(30px,4.4vw,52px); }
@@ -264,6 +280,8 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
   .portrait { max-width: 420px; margin: 0 auto; }
   .about { grid-template-columns: 1fr; gap: 34px; }
   .about__img { max-width: 420px; }
+  .space { grid-template-columns: 1fr; gap: 34px; }
+  .space__card { max-width: 460px; }
   .formats { grid-template-columns: 1fr; }
   .companies { grid-template-columns: repeat(3,1fr); }
 }
