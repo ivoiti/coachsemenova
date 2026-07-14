@@ -82,6 +82,20 @@ if (BOOK_URL) {
   }, { passive: true });
 })();
 
+// Цели Яндекс.Метрики: считаем не визиты, а действия.
+// В Метрике завести цели типа «JavaScript-событие» с этими идентификаторами.
+(function () {
+  const YM_ID = 110734546;
+  const goal = (name) => { if (typeof window.ym === 'function') window.ym(YM_ID, 'reachGoal', name); };
+  const on = (sel, name) => document.querySelectorAll(sel).forEach(el => el.addEventListener('click', () => goal(name)));
+  on('.js-book', 'zapis');                          // Записаться на сессию
+  on('a[href$=".pdf"]', 'cv');                      // Скачать CV
+  on('[data-tg]', 'telegram');                      // Telegram-канал «Внутренний мир»
+  on('a[href^="mailto:"]', 'email');                // Написать на почту
+  on('a[href^="tel:"]', 'phone');                   // Клик по телефону
+  on('a[href*="voobrazhaemy.ru"]', 'voobrazhaemy');  // Переход в арт-проект
+})();
+
 // Year
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
