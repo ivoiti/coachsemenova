@@ -30,6 +30,48 @@ if (BOOK_URL) {
   document.querySelectorAll('.js-book').forEach(a => { a.href = BOOK_URL; a.target = '_blank'; a.rel = 'noopener'; });
 }
 
+// Reviews carousel
+(function () {
+  const car = document.getElementById('revCarousel');
+  if (!car) return;
+  const track = car.querySelector('.rev-track');
+  const slides = [...car.querySelectorAll('.rev-slide')];
+  const dotsWrap = car.querySelector('.rev-dots');
+  let i = 0;
+  slides.forEach((_, n) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Отзыв ' + (n + 1));
+    if (n === 0) b.className = 'active';
+    b.addEventListener('click', () => go(n));
+    dotsWrap.appendChild(b);
+  });
+  const dots = [...dotsWrap.children];
+  function go(n) {
+    i = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    dots.forEach((d, k) => d.classList.toggle('active', k === i));
+  }
+  car.querySelector('.rev-prev').addEventListener('click', () => go(i - 1));
+  car.querySelector('.rev-next').addEventListener('click', () => go(i + 1));
+  // expand / collapse long reviews
+  car.querySelectorAll('.rev-more').forEach(btn => btn.addEventListener('click', () => {
+    const t = btn.previousElementSibling;
+    const clamped = t.classList.toggle('is-clamped');
+    btn.textContent = clamped ? 'Читать полностью' : 'Свернуть';
+  }));
+  // touch swipe
+  const vp = car.querySelector('.rev-viewport');
+  let x0 = null;
+  vp.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  vp.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, { passive: true });
+})();
+
 // Year
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
