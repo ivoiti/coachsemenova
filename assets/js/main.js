@@ -30,6 +30,16 @@ if (BOOK_URL) {
   document.querySelectorAll('.js-book').forEach(a => { a.href = BOOK_URL; a.target = '_blank'; a.rel = 'noopener'; });
 }
 
+// Back to top
+(function () {
+  const btn = document.getElementById('toTop');
+  if (!btn) return;
+  const toggle = () => btn.classList.toggle('show', window.scrollY > 600);
+  toggle();
+  window.addEventListener('scroll', toggle, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+
 // Reviews carousel
 (function () {
   const car = document.getElementById('revCarousel');
