@@ -140,11 +140,11 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 
 /* ---------- Trust bar ---------- */
 .trust { background: var(--petrol); color: #fff; }
-.trust .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px; padding: 42px 24px; }
+.trust .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px; padding: 26px 24px; }
 .trust .stat { text-align: center; position: relative; }
 .trust .stat:not(:last-child)::after { content:""; position:absolute; right: -12px; top: 10%; height: 80%; width: 1px; background: rgba(255,255,255,.18); }
-.trust .stat b { display:block; font-family: var(--serif); font-size: clamp(30px,3.4vw,44px); line-height: 1; }
-.trust .stat span { display:block; margin-top: 8px; font-size: 13.5px; color: rgba(255,255,255,.78); letter-spacing: .02em; }
+.trust .stat b { display:block; font-family: var(--serif); font-size: clamp(26px,2.8vw,36px); line-height: 1; }
+.trust .stat span { display:block; margin-top: 6px; font-size: 13px; color: rgba(255,255,255,.78); letter-spacing: .02em; }
 
 /* ---------- Section base ---------- */
 .section { padding: 96px 0; position: relative; }
