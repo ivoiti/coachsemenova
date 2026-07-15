@@ -26,8 +26,8 @@
      Тон ~340° против 13° у коралла: рядом, но не сливается. */
   --rose:          #C2557A;
   --rose-deep:     #9C3A5C;
-  --rose-soft:     #FBE7EC;
-  --rose-line:     #F0C2CE;
+  --rose-soft:     #FBDCE6;
+  --rose-line:     #EFB5C8;
 
   --white:         #FFFFFF;
 
@@ -81,7 +81,7 @@ h1,h2,h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; margi
 .btn-light { background: #fff; color: var(--petrol); box-shadow: var(--shadow-soft); }
 .btn-light:hover { transform: translateY(-2px); }
 .btn-rose { background: var(--rose-soft); color: var(--rose-deep); border-color: var(--rose-line); }
-.btn-rose:hover { background: #F6D3DE; border-color: var(--rose); transform: translateY(-2px); }
+.btn-rose:hover { background: #F7C8D8; border-color: var(--rose); transform: translateY(-2px); }
 
 /* Выход из блока-анонса на страницу Журнала */
 .jall { text-align: center; margin-top: 44px; }
@@ -117,7 +117,7 @@ h1,h2,h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; margi
 .nav a.nav-journal::after { content: none; }
 .nav a.nav-journal:hover {
   color: var(--rose-deep);
-  background: #F6D3DE;
+  background: #F7C8D8;
   border-color: var(--rose);
 }
 .nav-cta { display: flex; align-items: center; gap: 12px; }
