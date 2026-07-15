@@ -346,6 +346,11 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 .article__body ol li::before { content: counter(n); position: absolute; left: 0; top: 1px; font-family: var(--serif); font-weight: 700; color: var(--blush); font-size: 17px; }
 .article__body blockquote { margin: 28px 0; padding: 4px 0 4px 24px; border-left: 3px solid var(--coral); font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.5; color: var(--petrol-deep); }
 .article__body .ref { font-size: 14.5px; color: var(--muted); border-top: 1px solid rgba(44,109,114,.14); padding-top: 18px; }
+
+/* Иллюстрация внутри статьи + подпись с авторством */
+.article__body figure { margin: 34px 0; }
+.article__body figure img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+.article__body figcaption { margin-top: 12px; font-size: 14.5px; color: var(--muted); text-align: center; }
 .article__source { margin: 34px 0 0; font-size: 14.5px; color: var(--muted); }
 .article__source a { color: var(--petrol); font-weight: 600; }
 
