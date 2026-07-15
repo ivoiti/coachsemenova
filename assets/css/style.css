@@ -22,6 +22,12 @@
   --coral:         #D9694A;
   --coral-deep:    #C4553A;
 
+  /* Золото (третий акцент — подсветка «Журнала») */
+  --gold:          #B8862B;
+  --gold-deep:     #7F5710;
+  --gold-soft:     #F7E8C8;
+  --gold-line:     #E3C689;
+
   --white:         #FFFFFF;
 
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -73,6 +79,11 @@ h1,h2,h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; margi
 .btn-ghost:hover { border-color: var(--petrol); background: var(--petrol); color: #fff; transform: translateY(-2px); }
 .btn-light { background: #fff; color: var(--petrol); box-shadow: var(--shadow-soft); }
 .btn-light:hover { transform: translateY(-2px); }
+.btn-gold { background: var(--gold-soft); color: var(--gold-deep); border-color: var(--gold-line); }
+.btn-gold:hover { background: #F0DBA4; border-color: var(--gold); transform: translateY(-2px); }
+
+/* Выход из блока-анонса на страницу Журнала */
+.jall { text-align: center; margin-top: 44px; }
 
 /* ---------- Header ---------- */
 .header {
@@ -90,6 +101,24 @@ h1,h2,h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; margi
 .nav a::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background: var(--coral); transition: width .3s var(--ease); }
 .nav a:hover { color: var(--petrol); }
 .nav a:hover::after { width: 100%; }
+
+/* «Журнал» — золотая таблетка, единственный выделенный пункт меню */
+.nav a.nav-journal {
+  color: var(--gold-deep);
+  font-weight: 600;
+  background: var(--gold-soft);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  padding: 7px 16px;
+  margin: -7px 0;
+  transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+}
+.nav a.nav-journal::after { content: none; }
+.nav a.nav-journal:hover {
+  color: var(--gold-deep);
+  background: #F0DBA4;
+  border-color: var(--gold);
+}
 .nav-cta { display: flex; align-items: center; gap: 14px; }
 .burger { display: none; background: none; border: 0; cursor: pointer; width: 44px; height: 44px; position: relative; }
 .burger span { position:absolute; left: 9px; right: 9px; height: 2px; background: var(--petrol); transition: .3s var(--ease); }
