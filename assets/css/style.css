@@ -277,6 +277,7 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 .jcard__media { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--petrol), var(--petrol-deep)); position: relative; }
 .jcard:nth-child(2) .jcard__media { background: linear-gradient(135deg, var(--coral), var(--coral-deep)); }
 .jcard:nth-child(3) .jcard__media { background: linear-gradient(135deg, var(--blush), #d9a59d); }
+.jcard__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .jcard__tag { position:absolute; left: 16px; top: 16px; background: rgba(255,255,255,.9); color: var(--petrol-deep); font-size: 12px; font-weight: 600; padding: 6px 13px; border-radius: 100px; }
 .jcard__body { padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
 .jcard__date { font-size: 13px; color: var(--muted); }
