@@ -97,8 +97,8 @@ h1,h2,h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; margi
 .brand { display: flex; align-items: center; }
 .brand img { height: 46px; width: auto; transition: height .4s; }
 .header.scrolled .brand img { height: 40px; }
-.nav { display: flex; align-items: center; gap: 34px; }
-.nav a { font-size: 14.5px; font-weight: 500; color: var(--ink); position: relative; transition: color .2s; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { font-size: 14.5px; font-weight: 500; color: var(--ink); position: relative; transition: color .2s; white-space: nowrap; }
 .nav a::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background: var(--coral); transition: width .3s var(--ease); }
 .nav a:hover { color: var(--petrol); }
 .nav a:hover::after { width: 100%; }
@@ -120,7 +120,13 @@ h1,h2,h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; margi
   background: #F6D3DE;
   border-color: var(--rose);
 }
-.nav-cta { display: flex; align-items: center; gap: 14px; }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+
+/* Кнопки в шапке мельче, чем на странице: «Скачать CV» — вровень
+   с таблеткой «Журнал», «Записаться» — чуть крупнее его, но не громоздкая */
+.header .nav-cta .btn { font-size: 14.5px; border-radius: 999px; }
+.header .nav-cta .btn-ghost { font-weight: 600; padding: 7px 16px; border-width: 1px; }
+.header .nav-cta .btn-primary { padding: 9px 20px; box-shadow: 0 8px 20px -10px rgba(217,105,74,.7); }
 .burger { display: none; background: none; border: 0; cursor: pointer; width: 44px; height: 44px; position: relative; }
 .burger span { position:absolute; left: 9px; right: 9px; height: 2px; background: var(--petrol); transition: .3s var(--ease); }
 .burger span:nth-child(1){ top: 15px; } .burger span:nth-child(2){ top: 22px; } .burger span:nth-child(3){ top: 29px; }
