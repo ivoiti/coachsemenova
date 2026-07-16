@@ -415,9 +415,13 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 
 .mkey { position: sticky; top: 100px; text-align: center; }
 .mkey__color { height: 118px; border-radius: 18px; background: linear-gradient(150deg, var(--petrol), var(--petrol-deep)); box-shadow: var(--shadow-soft); }
-.mkey__sym { width: 100%; height: 118px; display: block; }
-.mkey__sym line, .mkey__sym circle { stroke: var(--petrol); stroke-width: 2.4; fill: none; stroke-linecap: round; }
-.mkey__sym circle { fill: var(--petrol); }
+.mkey__sym { width: 100%; height: 122px; display: block; overflow: visible; }
+.mkey__grid line { stroke: var(--petrol); stroke-width: 1; opacity: .14; }
+.mkey__con path, .mkey__con line { fill: none; stroke: var(--petrol); stroke-width: 1.4; opacity: .45; stroke-linecap: round; stroke-linejoin: round; }
+.mkey__con line { opacity: .28; }
+.mkey__star circle { fill: var(--petrol); }
+.mkey__star circle:nth-child(4) { fill: var(--petrol-deep); }
+.mkey__spark path { stroke: var(--coral); stroke-width: 1.6; stroke-linecap: round; opacity: .7; }
 .mkey__cap { font-size: 13.5px; line-height: 1.5; color: var(--muted); margin: 14px 0 0; }
 .mkey__cap b { color: var(--petrol-deep); }
 
