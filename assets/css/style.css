@@ -396,6 +396,61 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 .pagehero h1 { font-size: clamp(38px,6vw,66px); }
 .pagehero p { color: var(--muted); font-size: 19px; margin: 18px auto 0; max-width: 44ch; }
 
+/* ---------- Manifest ---------- */
+.manifest-hero::before {
+  content:""; position:absolute; top:0; left:0; right:0; height: 520px; z-index:0;
+  background: radial-gradient(70% 80% at 50% -10%, var(--petrol-soft), rgba(228,238,237,0) 70%);
+}
+.manifest-hero .wrap { position: relative; z-index: 1; }
+.manifest__emblem { width: 108px; height: 108px; margin: 0 auto 26px; opacity: .96; }
+.manifest { max-width: 900px; }
+.manifest__lead { margin-bottom: 20px; }
+.manifest__lead p { font-size: 20px; line-height: 1.7; color: #3a5350; margin: 0 0 18px; }
+.manifest__lead p:first-child { font-family: var(--serif); font-style: italic; font-size: 23px; line-height: 1.5; color: var(--petrol-deep); }
+
+.mblock { display: grid; grid-template-columns: 180px 1fr; gap: 46px; align-items: start; padding: 40px 0; border-top: 1px solid rgba(44,109,114,.14); }
+.mblock__body h2 { font-size: clamp(24px,3vw,32px); color: var(--petrol); margin: 0 0 16px; }
+.mblock__body p { font-size: 17.5px; line-height: 1.75; color: #46605d; margin: 0 0 16px; }
+.mblock__body .mlead { font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+
+.mkey { position: sticky; top: 100px; text-align: center; }
+.mkey__color { height: 118px; border-radius: 18px; background: linear-gradient(150deg, var(--petrol), var(--petrol-deep)); box-shadow: var(--shadow-soft); }
+.mkey__sym { width: 100%; height: 118px; display: block; }
+.mkey__sym line, .mkey__sym circle { stroke: var(--petrol); stroke-width: 2.4; fill: none; stroke-linecap: round; }
+.mkey__sym circle { fill: var(--petrol); }
+.mkey__cap { font-size: 13.5px; line-height: 1.5; color: var(--muted); margin: 14px 0 0; }
+.mkey__cap b { color: var(--petrol-deep); }
+
+.mlist { list-style: none; margin: 0 0 16px; padding: 0; }
+.mlist li { position: relative; padding-left: 26px; margin-bottom: 12px; font-size: 17px; line-height: 1.7; color: #46605d; }
+.mlist li::before { content:""; position:absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); opacity: .75; }
+.mlist li b { color: var(--ink); }
+
+.mprinciples { display: grid; gap: 4px; }
+.mprinciple { padding: 18px 0; border-top: 1px dashed rgba(44,109,114,.2); }
+.mprinciple:first-child { border-top: 0; padding-top: 6px; }
+.mprinciple h3 { font-size: 19px; color: var(--ink); margin: 0 0 6px; }
+.mprinciple p { font-size: 16.5px; line-height: 1.7; color: #46605d; margin: 0; }
+
+.mshort { margin: 40px 0 10px; background: var(--petrol); color: #eef6f4; border-radius: var(--radius-lg); padding: 46px 48px; box-shadow: var(--shadow); }
+.mshort__label { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--blush); font-weight: 600; margin: 0 0 18px; }
+.mshort p { font-family: var(--serif); font-size: clamp(20px,2.6vw,26px); line-height: 1.5; margin: 0 0 10px; color: #f4faf8; }
+.mshort__cta { margin-top: 28px; }
+
+.manifest__back { margin-top: 34px; }
+
+.about__link { margin: 18px 0 0; }
+.about__link a { color: var(--petrol); font-weight: 600; font-size: 15px; border-bottom: 1px solid rgba(44,109,114,.3); padding-bottom: 2px; transition: border-color .25s; }
+.about__link a:hover { border-color: var(--petrol); }
+
+@media (max-width: 720px) {
+  .mblock { grid-template-columns: 1fr; gap: 20px; }
+  .mkey { position: static; display: flex; align-items: center; gap: 18px; text-align: left; }
+  .mkey__color, .mkey__sym { width: 92px; height: 92px; flex: none; }
+  .mkey__cap { margin: 0; text-align: left; }
+  .mshort { padding: 34px 26px; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 44px; }
@@ -407,10 +462,11 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
   .formats { grid-template-columns: 1fr; }
   .companies { grid-template-columns: repeat(3,1fr); }
 }
-/* Шапке в полном составе нужно ~1112px. Чтобы пункты не ломались на две
-   строки и шапка не вылезала за экран — две ступени до бургера.
-   1180: поджимаем меню и убираем «Скачать CV» (он продублирован в первом экране). */
-@media (max-width: 1180px) {
+/* Шапке в полном составе нужно ~1220px (6 пунктов + таблетка + 2 кнопки).
+   Чтобы пункты не ломались на две строки и шапка не вылезала за экран —
+   две ступени до бургера.
+   1280: поджимаем меню и убираем «Скачать CV» (он продублирован в первом экране). */
+@media (max-width: 1280px) {
   .nav { gap: 16px; }
   .header .nav-cta .btn-ghost { display: none; }
 }
