@@ -323,13 +323,25 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 
 /* ---------- Footer ---------- */
 .footer { background: var(--petrol); color: rgba(255,255,255,.78); padding: 56px 0 34px; font-size: 14px; }
-.footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; margin-bottom: 34px; }
+.footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 34px; }
+@media (max-width: 720px){ .footer .cols { grid-template-columns: 1fr 1fr; gap: 26px 30px; } }
+.footer-projects { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+.footer-projects a { color: var(--petrol); text-decoration: none; }
+.footer-projects a:hover { text-decoration: underline; }
 .footer .brand-f { font-family: var(--serif); font-size: 22px; color: #fff; margin-bottom: 14px; }
 .footer a:hover { color: #fff; }
 .footer h4 { color: #fff; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 14px; font-family: var(--sans); }
 .footer .legal { border-top: 1px solid rgba(255,255,255,.18); padding-top: 22px; font-size: 12.5px; color: rgba(255,255,255,.62); line-height: 1.7; }
 
 /* ---------- Article page ---------- */
+.breadcrumbs { padding: 120px 24px 0; }
+.breadcrumbs .wrap { max-width: 740px; margin: 0 auto; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; line-height: 1.4; }
+.breadcrumbs a { color: var(--muted); text-decoration: none; transition: color .2s var(--ease); }
+.breadcrumbs a:hover { color: var(--petrol); }
+.breadcrumbs__sep { color: var(--rose-line); }
+.breadcrumbs__current { color: var(--petrol-deep); font-weight: 600; }
+.breadcrumbs + .article { padding-top: 20px; }
+
 .article { max-width: 740px; margin: 0 auto; padding: 150px 24px 0; }
 .article__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); margin-bottom: 18px; }
 .article__meta .tag { background: var(--petrol-soft); color: var(--petrol-deep); padding: 5px 12px; border-radius: 100px; font-size: 12.5px; font-weight: 600; }

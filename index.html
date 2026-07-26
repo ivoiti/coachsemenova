@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20260715p">
+<link rel="stylesheet" href="assets/css/style.css?v=20260726a">
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -43,42 +43,82 @@
 </script>
 <!-- /Yandex.Metrika counter -->
 
-<!-- Микроразметка: кто такая Елена, чем занимается, как связаться -->
+<!-- Микроразметка: единый узел персоны + услуга + сайт (связаны через @id) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Елена Семёнова",
-  "alternateName": "Елена Семенова",
-  "url": "https://coachsemenova.ru/",
-  "image": "https://coachsemenova.ru/assets/img/elena.jpg",
-  "jobTitle": "Коуч первых лиц, психолог",
-  "description": "Коуч первых лиц и психолог. Executive- и командный коучинг, карьерное консультирование, арт-коучинг. Более 17 000 интервью с руководителями, 11 сертификаций в коучинге.",
-  "email": "escoach@ya.ru",
-  "telephone": "+7-916-960-18-63",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Москва",
-    "addressCountry": "RU"
-  },
-  "sameAs": [
-    "https://t.me/life_watch",
-    "https://voobrazhaemy.ru"
-  ],
-  "knowsAbout": [
-    "Executive-коучинг",
-    "Командный коучинг",
-    "Карьерное консультирование",
-    "Психология",
-    "Психодиагностика",
-    "Арт-коучинг",
-    "Стратегия",
-    "Трансформация",
-    "Организационное консультирование",
-    "Менторинг",
-    "Фасилитация"
-  ],
-  "knowsLanguage": "ru"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://coachsemenova.ru/#elena",
+      "name": "Елена Семёнова",
+      "alternateName": "Елена Семенова",
+      "url": "https://coachsemenova.ru/",
+      "image": "https://coachsemenova.ru/assets/img/elena.jpg",
+      "jobTitle": "Executive-коуч, психолог",
+      "description": "Коуч первых лиц и психолог. Executive- и командный коучинг, карьерное консультирование, арт-коучинг. Более 17 000 интервью с руководителями, 11 сертификаций в коучинге.",
+      "email": "escoach@ya.ru",
+      "telephone": "+7-916-960-18-63",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+      },
+      "sameAs": [
+        "https://voobrazhaemy.ru",
+        "https://ai4g.ru",
+        "https://t.me/life_watch",
+        "https://vk.com/semenova_en",
+        "https://www.b17.ru/semenova_selena/"
+      ],
+      "knowsAbout": [
+        "Executive-коучинг",
+        "Командный коучинг",
+        "Карьерное консультирование",
+        "Психология",
+        "Психодиагностика",
+        "Арт-коучинг",
+        "Стратегия",
+        "Трансформация",
+        "Организационное консультирование",
+        "Менторинг",
+        "Фасилитация"
+      ],
+      "knowsLanguage": "ru"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://coachsemenova.ru/#service",
+      "name": "Елена Семёнова — коучинг и психология",
+      "url": "https://coachsemenova.ru/",
+      "image": "https://coachsemenova.ru/assets/img/og-cover.jpg",
+      "provider": { "@id": "https://coachsemenova.ru/#elena" },
+      "founder": { "@id": "https://coachsemenova.ru/#elena" },
+      "areaServed": "RU",
+      "priceRange": "$$$",
+      "telephone": "+7-916-960-18-63",
+      "email": "escoach@ya.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+      },
+      "serviceType": [
+        "Executive-коучинг",
+        "Командный коучинг",
+        "Карьерное консультирование",
+        "Арт-коучинг"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://coachsemenova.ru/#website",
+      "url": "https://coachsemenova.ru/",
+      "name": "Елена Семёнова — коуч первых лиц, психолог",
+      "inLanguage": "ru",
+      "publisher": { "@id": "https://coachsemenova.ru/#elena" }
+    }
+  ]
 }
 </script>
 </head>
@@ -572,6 +612,10 @@
       <div>
         <h4>Контакты</h4>
         <p><a href="tel:+79169601863">+7 916 960-18-63</a><br><a href="mailto:escoach@ya.ru">escoach@ya.ru</a><br><a href="#" data-tg>Telegram «Внутренний мир»</a></p>
+      </div>
+      <div>
+        <h4>Проекты Елены</h4>
+        <p><a href="https://voobrazhaemy.ru" target="_blank" rel="noopener">Мы должны быть воображаемы</a><br><a href="https://ai4g.ru" target="_blank" rel="noopener">AI4G — нейросервис</a></p>
       </div>
     </div>
     <div class="legal">
