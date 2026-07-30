@@ -342,6 +342,12 @@ body.menu-open .burger span:nth-child(3){ top: 22px; transform: rotate(-45deg); 
 .breadcrumbs__current { color: var(--petrol-deep); font-weight: 600; }
 .breadcrumbs + .article { padding-top: 20px; }
 
+.article__related { max-width: 740px; margin: 44px auto 0; padding-top: 30px; border-top: 1px solid var(--line, #E4EEED); }
+.article__related h2 { font-size: 20px; color: var(--petrol); margin: 0 0 18px; }
+.article__related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.article__related a { display: block; font-family: var(--serif); font-size: 18px; line-height: 1.35; color: var(--ink); text-decoration: none; padding: 14px 18px; background: var(--petrol-soft); border-radius: 14px; transition: background .2s var(--ease), color .2s var(--ease); }
+.article__related a:hover { background: var(--petrol); color: #fff; }
+
 .article { max-width: 740px; margin: 0 auto; padding: 150px 24px 0; }
 .article__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); margin-bottom: 18px; }
 .article__meta .tag { background: var(--petrol-soft); color: var(--petrol-deep); padding: 5px 12px; border-radius: 100px; font-size: 12.5px; font-weight: 600; }
